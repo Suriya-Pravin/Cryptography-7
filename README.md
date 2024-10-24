@@ -17,7 +17,6 @@ To use Advanced Encryption Standard (AES) Algorithm for a practical application 
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-
 void simple_des_encrypt(uint64_t *block, uint64_t key);
 void simple_des_decrypt(uint64_t *block, uint64_t key);
 
@@ -32,21 +31,17 @@ int main() {
 
     printf("\nOriginal Block: %016lX\n", block);
     
-
     simple_des_encrypt(&block, key);
     printf("Encrypted Block: %016lX\n", block);
     
-
     simple_des_decrypt(&block, key);
     printf("Decrypted Block: %016lX\n", block);
 
     return 0;
 }
-
 void simple_des_encrypt(uint64_t *block, uint64_t key) {
     *block ^= key;  
 }
-
 void simple_des_decrypt(uint64_t *block, uint64_t key) {
     *block ^= key;  
 }
