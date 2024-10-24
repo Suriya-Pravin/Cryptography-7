@@ -39,6 +39,7 @@ int main() {
 
     return 0;
 }
+
 void simple_des_encrypt(uint64_t *block, uint64_t key) {
     *block ^= key;  
 }
